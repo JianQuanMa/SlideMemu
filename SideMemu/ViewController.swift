@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var viewLeadingContraint: NSLayoutConstraint!
+    @IBOutlet weak var sideMemuView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-  //      viewLeadingContraint.constant = -200
+        sideMemuView.layer.opacity = 10
+        sideMemuView.layer.shadowRadius = 6
+        
     }
 
     @IBAction func didTappedMemuButton(_ sender: UIBarButtonItem) {

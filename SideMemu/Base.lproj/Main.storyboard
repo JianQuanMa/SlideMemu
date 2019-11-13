@@ -67,6 +67,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sideMemuView" destination="Y7J-Dn-gKO" id="fe3-H2-WWQ"/>
                         <outlet property="viewLeadingContraint" destination="2lO-pe-ig7" id="mIp-vY-1ct"/>
                     </connections>
                 </viewController>
