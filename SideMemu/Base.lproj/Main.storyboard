@@ -25,9 +25,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7J-Dn-gKO">
-                                <rect key="frame" x="0.0" y="88" width="200" height="808"/>
+                                <rect key="frame" x="-200" y="88" width="200" height="808"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgK-MF-MDV">
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgK-MF-MDV">
                                         <rect key="frame" x="10" y="10" width="180" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ezx-KI-JGx"/>
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Y7J-Dn-gKO" secondAttribute="bottom" id="1Xb-4R-I4a"/>
-                            <constraint firstItem="Y7J-Dn-gKO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2lO-pe-ig7"/>
+                            <constraint firstItem="Y7J-Dn-gKO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-200" identifier="-200" id="2lO-pe-ig7"/>
                             <constraint firstItem="Y7J-Dn-gKO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K1X-0Y-PLK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LvJ-k4-fWT" secondAttribute="trailing" id="LMc-1E-x7w"/>
                             <constraint firstItem="LvJ-k4-fWT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="cue-JS-Loc"/>
@@ -60,8 +60,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Memu" id="ZJs-I0-X7N">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="folder" catalog="system" id="uAp-ur-UjN"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="folder" catalog="system" id="uAp-ur-UjN">
+                            <connections>
+                                <action selector="didTappedMemuButton:" destination="BYZ-38-t0r" id="EFG-6B-owW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="viewLeadingContraint" destination="2lO-pe-ig7" id="mIp-vY-1ct"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
